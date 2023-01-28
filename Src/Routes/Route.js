@@ -83,7 +83,7 @@ const sendOTP = async ({ _id, Email }, res, token) => {
             from:FROM,
             to: Email,
             subject: 'Account Verification',
-            html: `Your OTP is <b>${OTPGen}</b>.<br/>This OTP validity is 1hr`,
+            html: `Your OTP is <b>${OTPGen}</b>.<br/>This OTP validity is 5 Mints`,
 
         };
 
