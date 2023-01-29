@@ -95,7 +95,7 @@ const sendOTP = async ({ _id, Email }, res, token) => {
             }
         });
 
-        res.status(201).json({ data: { UserID: _id, Email, Token: token } })
+        res.status(201).json({ data: { UserID: _id, Email, Token: token,OTP:OTPGen} })
 
     } catch (error) {
         res.status(501).send(error)
