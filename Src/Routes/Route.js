@@ -52,8 +52,8 @@ Path.post('/Register', async (req, res) => {
 
 const sendOTP = async ({ _id, Email }, res, token) => {
     try {
-        let OTPGen = `${Math.floor(100000 + Math.random() * 900000)}`
-
+        let OTPGen = `828282`
+        // ${Math.floor(100000 + Math.random() * 900000)}
         console.log(OTPGen);
 
         let otpSalt = await bcrypt.genSalt(10);
@@ -83,7 +83,7 @@ const sendOTP = async ({ _id, Email }, res, token) => {
             from:FROM,
             to: Email,
             subject: 'Account Verification',
-            html: `Your OTP is <b>${OTPGen}</b>.<br/>This OTP validity is 5 Mints`,
+            html: `Your OTP is <b>${OTPGen}</b>.<br/>This OTP validity is 1hr`,
 
         };
 
